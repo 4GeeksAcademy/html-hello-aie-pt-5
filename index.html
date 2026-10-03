@@ -653,8 +653,119 @@
           </div>
         </section>
 
-        <section id="errores" data-title="Log de errores" class="hidden">
-          <p class="rounded-xl border-2 border-dashed border-gray-300 p-8 text-center text-gray-500 dark:border-gray-700 dark:text-gray-400">Aquí irá el log de errores.</p>
+        <section id="errores" data-title="Log de errores" class="hidden pb-24">
+          <div class="rounded-xl bg-white shadow-sm dark:bg-gray-800">
+            <table class="w-full text-sm">
+              <thead>
+                <tr>
+                  <th scope="col" class="px-4 py-3 text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400 text-left">Timestamp</th>
+                  <th scope="col" class="px-4 py-3 text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400 text-left">Agente</th>
+                  <th scope="col" class="px-4 py-3 text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400 text-left">Tipo</th>
+                  <th scope="col" class="px-4 py-3 text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400 text-left">Descripción</th>
+                  <th scope="col" class="px-4 py-3 text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400 text-left">Estado</th>
+                  <th scope="col" class="px-4 py-3 text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400 text-right">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-t border-gray-100 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700/40">
+                  <td class="whitespace-nowrap px-4 py-4 text-gray-600 dark:text-gray-300">2026-10-02 09:14</td>
+                  <td class="px-4 py-4 font-medium text-gray-900 dark:text-white">SupportAI</td>
+                  <td class="whitespace-nowrap px-4 py-4"><span class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Autenticación</span></td>
+                  <td class="px-4 py-4 text-gray-600 dark:text-gray-300">El token de la cuenta de email expiró al enviar una respuesta</td>
+                  <td class="px-4 py-4"><span data-error-status class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-200">Pendiente</span></td>
+                  <td class="px-4 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button type="button" data-dropdown-toggle aria-haspopup="true" aria-expanded="false" aria-label="Acciones para el error E-01" class="rounded-md px-2 py-1 text-lg leading-none text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700">⋮</button>
+                      <div data-dropdown-menu class="absolute right-0 z-20 mt-1 hidden w-48 rounded-lg border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+                        <button type="button" data-action="error-detail" data-id="e01" class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Ver detalle</button>
+                        <button type="button" data-action="error-resolve" data-id="e01" class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent dark:text-gray-200 dark:hover:bg-gray-700">Marcar como resuelto</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-t border-gray-100 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700/40">
+                  <td class="whitespace-nowrap px-4 py-4 text-gray-600 dark:text-gray-300">2026-10-02 08:47</td>
+                  <td class="px-4 py-4 font-medium text-gray-900 dark:text-white">DataScout</td>
+                  <td class="whitespace-nowrap px-4 py-4"><span class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200">Timeout</span></td>
+                  <td class="px-4 py-4 text-gray-600 dark:text-gray-300">La página objetivo no respondió en 30 s</td>
+                  <td class="px-4 py-4"><span data-error-status class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-200">Pendiente</span></td>
+                  <td class="px-4 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button type="button" data-dropdown-toggle aria-haspopup="true" aria-expanded="false" aria-label="Acciones para el error E-02" class="rounded-md px-2 py-1 text-lg leading-none text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700">⋮</button>
+                      <div data-dropdown-menu class="absolute right-0 z-20 mt-1 hidden w-48 rounded-lg border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+                        <button type="button" data-action="error-detail" data-id="e02" class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Ver detalle</button>
+                        <button type="button" data-action="error-resolve" data-id="e02" class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent dark:text-gray-200 dark:hover:bg-gray-700">Marcar como resuelto</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-t border-gray-100 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700/40">
+                  <td class="whitespace-nowrap px-4 py-4 text-gray-600 dark:text-gray-300">2026-10-01 22:05</td>
+                  <td class="px-4 py-4 font-medium text-gray-900 dark:text-white">SupportAI</td>
+                  <td class="whitespace-nowrap px-4 py-4"><span class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200">Límite de tasa</span></td>
+                  <td class="px-4 py-4 text-gray-600 dark:text-gray-300">Se superó el límite de solicitudes del proveedor de email</td>
+                  <td class="px-4 py-4"><span data-error-status class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-200">Pendiente</span></td>
+                  <td class="px-4 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button type="button" data-dropdown-toggle aria-haspopup="true" aria-expanded="false" aria-label="Acciones para el error E-03" class="rounded-md px-2 py-1 text-lg leading-none text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700">⋮</button>
+                      <div data-dropdown-menu class="absolute right-0 z-20 mt-1 hidden w-48 rounded-lg border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+                        <button type="button" data-action="error-detail" data-id="e03" class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Ver detalle</button>
+                        <button type="button" data-action="error-resolve" data-id="e03" class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent dark:text-gray-200 dark:hover:bg-gray-700">Marcar como resuelto</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-t border-gray-100 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700/40">
+                  <td class="whitespace-nowrap px-4 py-4 text-gray-600 dark:text-gray-300">2026-10-01 17:30</td>
+                  <td class="px-4 py-4 font-medium text-gray-900 dark:text-white">DataScout</td>
+                  <td class="whitespace-nowrap px-4 py-4"><span class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-200">Parsing</span></td>
+                  <td class="px-4 py-4 text-gray-600 dark:text-gray-300">No se pudo extraer texto de un PDF escaneado</td>
+                  <td class="px-4 py-4"><span data-error-status class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-200">Pendiente</span></td>
+                  <td class="px-4 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button type="button" data-dropdown-toggle aria-haspopup="true" aria-expanded="false" aria-label="Acciones para el error E-04" class="rounded-md px-2 py-1 text-lg leading-none text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700">⋮</button>
+                      <div data-dropdown-menu class="absolute right-0 z-20 mt-1 hidden w-48 rounded-lg border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+                        <button type="button" data-action="error-detail" data-id="e04" class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Ver detalle</button>
+                        <button type="button" data-action="error-resolve" data-id="e04" class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent dark:text-gray-200 dark:hover:bg-gray-700">Marcar como resuelto</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-t border-gray-100 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700/40">
+                  <td class="whitespace-nowrap px-4 py-4 text-gray-600 dark:text-gray-300">2026-09-30 11:12</td>
+                  <td class="px-4 py-4 font-medium text-gray-900 dark:text-white">SalesBot</td>
+                  <td class="whitespace-nowrap px-4 py-4"><span class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200">Timeout</span></td>
+                  <td class="px-4 py-4 text-gray-600 dark:text-gray-300">La búsqueda web excedió el tiempo límite</td>
+                  <td class="px-4 py-4"><span data-error-status class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Resuelto</span></td>
+                  <td class="px-4 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button type="button" data-dropdown-toggle aria-haspopup="true" aria-expanded="false" aria-label="Acciones para el error E-05" class="rounded-md px-2 py-1 text-lg leading-none text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700">⋮</button>
+                      <div data-dropdown-menu class="absolute right-0 z-20 mt-1 hidden w-48 rounded-lg border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+                        <button type="button" data-action="error-detail" data-id="e05" class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Ver detalle</button>
+                        <button type="button" data-action="error-resolve" data-id="e05" disabled class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent dark:text-gray-200 dark:hover:bg-gray-700">Marcar como resuelto</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-t border-gray-100 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700/40">
+                  <td class="whitespace-nowrap px-4 py-4 text-gray-600 dark:text-gray-300">2026-09-29 15:40</td>
+                  <td class="px-4 py-4 font-medium text-gray-900 dark:text-white">DocReader</td>
+                  <td class="whitespace-nowrap px-4 py-4"><span class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-200">Parsing</span></td>
+                  <td class="px-4 py-4 text-gray-600 dark:text-gray-300">Formato de archivo .pages no soportado</td>
+                  <td class="px-4 py-4"><span data-error-status class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Resuelto</span></td>
+                  <td class="px-4 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button type="button" data-dropdown-toggle aria-haspopup="true" aria-expanded="false" aria-label="Acciones para el error E-06" class="rounded-md px-2 py-1 text-lg leading-none text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700">⋮</button>
+                      <div data-dropdown-menu class="absolute right-0 z-20 mt-1 hidden w-48 rounded-lg border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+                        <button type="button" data-action="error-detail" data-id="e06" class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Ver detalle</button>
+                        <button type="button" data-action="error-resolve" data-id="e06" disabled class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent dark:text-gray-200 dark:hover:bg-gray-700">Marcar como resuelto</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
       </main>
@@ -785,6 +896,43 @@
         discount: { label: 'Cupón WELCOME20 (−20 %)', amount: 420 } }
     };
 
+    const ERROR_TYPE_CLASSES = {
+      'Autenticación': 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200',
+      'Límite de tasa': 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200',
+      'Timeout': 'bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200',
+      'Parsing': 'bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-200'
+    };
+
+    const ERROR_STATUS_CLASSES = {
+      'Pendiente': 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-200',
+      'Resuelto': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
+    };
+
+    const ERRORS = {
+      e01: { code: 'E-01', timestamp: '2026-10-02 09:14', agent: 'SupportAI', type: 'Autenticación', status: 'Pendiente',
+        description: 'El token de la cuenta de email expiró al enviar una respuesta',
+        trace: 'AuthError: invalid_grant (token expired)\n    at EmailSkill.send (skills/email.js:88:13)\n    at AgentRunner.executeStep (runner/agent.js:212:21)\n    at AgentRunner.run (runner/agent.js:145:9)\nAgent: SupportAI | Contrato: C-003 | Intento: 3/3' },
+      e02: { code: 'E-02', timestamp: '2026-10-02 08:47', agent: 'DataScout', type: 'Timeout', status: 'Pendiente',
+        description: 'La página objetivo no respondió en 30 s',
+        trace: 'TimeoutError: navigation timeout of 30000 ms exceeded\n    at WebBrowsingSkill.open (skills/browser.js:54:11)\n    at AgentRunner.executeStep (runner/agent.js:212:21)\n    at AgentRunner.run (runner/agent.js:145:9)\nAgent: DataScout | Contrato: C-005 | Intento: 2/3' },
+      e03: { code: 'E-03', timestamp: '2026-10-01 22:05', agent: 'SupportAI', type: 'Límite de tasa', status: 'Pendiente',
+        description: 'Se superó el límite de solicitudes del proveedor de email',
+        trace: 'RateLimitError: 429 Too Many Requests (email provider)\n    at EmailSkill.send (skills/email.js:91:9)\n    at AgentRunner.executeStep (runner/agent.js:212:21)\n    at AgentRunner.run (runner/agent.js:145:9)\nAgent: SupportAI | Contrato: C-003 | Intento: 1/3' },
+      e04: { code: 'E-04', timestamp: '2026-10-01 17:30', agent: 'DataScout', type: 'Parsing', status: 'Pendiente',
+        description: 'No se pudo extraer texto de un PDF escaneado',
+        trace: 'ParseError: no text layer found in scanned PDF\n    at DocumentSkill.extractText (skills/documents.js:132:15)\n    at AgentRunner.executeStep (runner/agent.js:212:21)\n    at AgentRunner.run (runner/agent.js:145:9)\nAgent: DataScout | Contrato: C-005 | Intento: 3/3' },
+      e05: { code: 'E-05', timestamp: '2026-09-30 11:12', agent: 'SalesBot', type: 'Timeout', status: 'Resuelto',
+        description: 'La búsqueda web excedió el tiempo límite',
+        trace: 'TimeoutError: search request exceeded 15000 ms\n    at WebBrowsingSkill.search (skills/browser.js:78:13)\n    at AgentRunner.executeStep (runner/agent.js:212:21)\n    at AgentRunner.run (runner/agent.js:145:9)\nAgent: SalesBot | Contrato: C-001 | Intento: 2/3' },
+      e06: { code: 'E-06', timestamp: '2026-09-29 15:40', agent: 'DocReader', type: 'Parsing', status: 'Resuelto',
+        description: 'Formato de archivo .pages no soportado',
+        trace: 'ParseError: unsupported file format ".pages"\n    at DocumentSkill.load (skills/documents.js:41:11)\n    at AgentRunner.executeStep (runner/agent.js:212:21)\n    at AgentRunner.run (runner/agent.js:145:9)\nAgent: DocReader | Contrato: C-002 | Intento: 1/3' }
+    };
+
+    function badgeWith(text, classes) {
+      return `<span class="rounded-full px-2.5 py-0.5 text-xs font-medium ${classes}">${text}</span>`;
+    }
+
     function formatMoney(amount) {
       return '$' + amount.toLocaleString('en-US');
     }
@@ -893,6 +1041,31 @@
         </div>`);
     }
 
+    function showErrorDetail(errorId) {
+      const error = ERRORS[errorId];
+      openModal(`Error ${error.code}`, `
+        <dl class="divide-y divide-gray-100 dark:divide-gray-700">
+          ${detailRow('Timestamp', error.timestamp)}
+          ${detailRow('Agente', error.agent)}
+          ${detailRow('Tipo', badgeWith(error.type, ERROR_TYPE_CLASSES[error.type]))}
+          ${detailRow('Estado', badgeWith(error.status, ERROR_STATUS_CLASSES[error.status]))}
+          ${detailRow('Descripción', error.description)}
+        </dl>
+        <p class="mt-4 mb-2 font-medium">Traza completa</p>
+        <pre id="error-trace" class="overflow-x-auto rounded-lg bg-gray-900 p-4 font-mono text-xs leading-relaxed text-gray-100 dark:bg-black/40"></pre>`);
+      document.getElementById('error-trace').textContent = error.trace;
+    }
+
+    function resolveError(button) {
+      const error = ERRORS[button.dataset.id];
+      error.status = 'Resuelto';
+      const statusBadge = button.closest('tr').querySelector('[data-error-status]');
+      statusBadge.textContent = 'Resuelto';
+      statusBadge.className = `rounded-full px-2.5 py-0.5 text-xs font-medium ${ERROR_STATUS_CLASSES['Resuelto']}`;
+      statusBadge.setAttribute('data-error-status', '');
+      button.disabled = true;
+    }
+
     function deleteItem(button, name) {
       if (confirm(`¿Seguro que quieres eliminar ${name}?`)) {
         button.closest('tr, article').remove();
@@ -926,6 +1099,8 @@
       if (action === 'skill-detail') showSkillDetail(id);
       if (action === 'skill-delete') deleteItem(button, `la skill ${SKILLS[id].name}`);
       if (action === 'contract-detail') showContractDetail(id);
+      if (action === 'error-detail') showErrorDetail(id);
+      if (action === 'error-resolve') resolveError(button);
       if (action === 'modal-cancel') closeModal();
     }
 

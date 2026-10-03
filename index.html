@@ -136,8 +136,130 @@
           </div>
         </section>
 
-        <section id="usuarios" data-title="Gestión de usuarios" class="hidden">
-          <p class="rounded-xl border-2 border-dashed border-gray-300 p-8 text-center text-gray-500 dark:border-gray-700 dark:text-gray-400">Aquí irá la tabla de usuarios.</p>
+        <section id="usuarios" data-title="Gestión de usuarios" class="hidden pb-24">
+          <div class="rounded-xl bg-white shadow-sm dark:bg-gray-800">
+            <table class="w-full text-sm">
+              <thead>
+                <tr>
+                  <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">Nombre</th>
+                  <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">Email</th>
+                  <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">Plan</th>
+                  <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">Estado</th>
+                  <th scope="col" class="px-6 py-3 text-right text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-t border-gray-100 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700/40">
+                  <td class="px-6 py-4">
+                    <div class="font-medium text-gray-900 dark:text-white">Laura Méndez</div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400">Nova Retail</div>
+                  </td>
+                  <td class="px-6 py-4 text-gray-600 dark:text-gray-300">laura@novaretail.com</td>
+                  <td class="px-6 py-4 text-gray-600 dark:text-gray-300">Enterprise</td>
+                  <td class="px-6 py-4"><span class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Activo</span></td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button type="button" data-dropdown-toggle aria-haspopup="true" aria-expanded="false" aria-label="Acciones para Laura Méndez" class="rounded-md px-2 py-1 text-lg leading-none text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700">⋮</button>
+                      <div data-dropdown-menu class="absolute right-0 z-20 mt-1 hidden w-40 rounded-lg border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+                        <button type="button" data-action="user-detail" data-id="laura" class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Ver detalle</button>
+                        <button type="button" data-action="user-delete" data-id="laura" class="block w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-gray-100 dark:text-red-400 dark:hover:bg-gray-700">Eliminar</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-t border-gray-100 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700/40">
+                  <td class="px-6 py-4">
+                    <div class="font-medium text-gray-900 dark:text-white">Diego Ramírez</div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400">Finexa</div>
+                  </td>
+                  <td class="px-6 py-4 text-gray-600 dark:text-gray-300">diego@finexa.io</td>
+                  <td class="px-6 py-4 text-gray-600 dark:text-gray-300">Pro</td>
+                  <td class="px-6 py-4"><span class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Activo</span></td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button type="button" data-dropdown-toggle aria-haspopup="true" aria-expanded="false" aria-label="Acciones para Diego Ramírez" class="rounded-md px-2 py-1 text-lg leading-none text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700">⋮</button>
+                      <div data-dropdown-menu class="absolute right-0 z-20 mt-1 hidden w-40 rounded-lg border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+                        <button type="button" data-action="user-detail" data-id="diego" class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Ver detalle</button>
+                        <button type="button" data-action="user-delete" data-id="diego" class="block w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-gray-100 dark:text-red-400 dark:hover:bg-gray-700">Eliminar</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-t border-gray-100 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700/40">
+                  <td class="px-6 py-4">
+                    <div class="font-medium text-gray-900 dark:text-white">Sofía Castro</div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400">Lumen Legal</div>
+                  </td>
+                  <td class="px-6 py-4 text-gray-600 dark:text-gray-300">sofia@lumenlegal.com</td>
+                  <td class="px-6 py-4 text-gray-600 dark:text-gray-300">Pro</td>
+                  <td class="px-6 py-4"><span class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Activo</span></td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button type="button" data-dropdown-toggle aria-haspopup="true" aria-expanded="false" aria-label="Acciones para Sofía Castro" class="rounded-md px-2 py-1 text-lg leading-none text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700">⋮</button>
+                      <div data-dropdown-menu class="absolute right-0 z-20 mt-1 hidden w-40 rounded-lg border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+                        <button type="button" data-action="user-detail" data-id="sofia" class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Ver detalle</button>
+                        <button type="button" data-action="user-delete" data-id="sofia" class="block w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-gray-100 dark:text-red-400 dark:hover:bg-gray-700">Eliminar</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-t border-gray-100 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700/40">
+                  <td class="px-6 py-4">
+                    <div class="font-medium text-gray-900 dark:text-white">Ana Torres</div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400">Bloom Health</div>
+                  </td>
+                  <td class="px-6 py-4 text-gray-600 dark:text-gray-300">ana@bloomhealth.com</td>
+                  <td class="px-6 py-4 text-gray-600 dark:text-gray-300">Starter</td>
+                  <td class="px-6 py-4"><span class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Activo</span></td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button type="button" data-dropdown-toggle aria-haspopup="true" aria-expanded="false" aria-label="Acciones para Ana Torres" class="rounded-md px-2 py-1 text-lg leading-none text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700">⋮</button>
+                      <div data-dropdown-menu class="absolute right-0 z-20 mt-1 hidden w-40 rounded-lg border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+                        <button type="button" data-action="user-detail" data-id="ana" class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Ver detalle</button>
+                        <button type="button" data-action="user-delete" data-id="ana" class="block w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-gray-100 dark:text-red-400 dark:hover:bg-gray-700">Eliminar</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-t border-gray-100 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700/40">
+                  <td class="px-6 py-4">
+                    <div class="font-medium text-gray-900 dark:text-white">Martín Rojas</div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400">Kairo Labs</div>
+                  </td>
+                  <td class="px-6 py-4 text-gray-600 dark:text-gray-300">martin@kairolabs.dev</td>
+                  <td class="px-6 py-4 text-gray-600 dark:text-gray-300">Starter</td>
+                  <td class="px-6 py-4"><span class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Suspendido</span></td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button type="button" data-dropdown-toggle aria-haspopup="true" aria-expanded="false" aria-label="Acciones para Martín Rojas" class="rounded-md px-2 py-1 text-lg leading-none text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700">⋮</button>
+                      <div data-dropdown-menu class="absolute right-0 z-20 mt-1 hidden w-40 rounded-lg border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+                        <button type="button" data-action="user-detail" data-id="martin" class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Ver detalle</button>
+                        <button type="button" data-action="user-delete" data-id="martin" class="block w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-gray-100 dark:text-red-400 dark:hover:bg-gray-700">Eliminar</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-t border-gray-100 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-700/40">
+                  <td class="px-6 py-4">
+                    <div class="font-medium text-gray-900 dark:text-white">Valentina Ruiz</div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400">Ortiz Studio</div>
+                  </td>
+                  <td class="px-6 py-4 text-gray-600 dark:text-gray-300">valentina@ortizstudio.com</td>
+                  <td class="px-6 py-4 text-gray-600 dark:text-gray-300">Starter</td>
+                  <td class="px-6 py-4"><span class="rounded-full px-2.5 py-0.5 text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200">Pendiente</span></td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="relative inline-block text-left">
+                      <button type="button" data-dropdown-toggle aria-haspopup="true" aria-expanded="false" aria-label="Acciones para Valentina Ruiz" class="rounded-md px-2 py-1 text-lg leading-none text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700">⋮</button>
+                      <div data-dropdown-menu class="absolute right-0 z-20 mt-1 hidden w-40 rounded-lg border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+                        <button type="button" data-action="user-detail" data-id="valentina" class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Ver detalle</button>
+                        <button type="button" data-action="user-delete" data-id="valentina" class="block w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-gray-100 dark:text-red-400 dark:hover:bg-gray-700">Eliminar</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section id="agentes" data-title="Gestión de agentes" class="hidden">
@@ -157,6 +279,18 @@
         </section>
 
       </main>
+    </div>
+  </div>
+
+  <div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 p-4" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="w-full max-w-lg rounded-xl bg-white shadow-xl dark:bg-gray-800">
+      <div class="flex items-center justify-between border-b border-gray-200 px-6 py-4 dark:border-gray-700">
+        <h2 id="modal-title" class="text-lg font-semibold text-gray-900 dark:text-white"></h2>
+        <button id="modal-close" type="button" aria-label="Cerrar" class="rounded-md p-1 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="modal-body" class="px-6 py-5 text-sm text-gray-700 dark:text-gray-200"></div>
     </div>
   </div>
 
@@ -219,6 +353,118 @@
     });
 
     updateThemeLabel();
+
+    const BADGE_CLASSES = {
+      'Activo': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
+      'Suspendido': 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200',
+      'Pendiente': 'bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200'
+    };
+
+    function badge(text) {
+      return `<span class="rounded-full px-2.5 py-0.5 text-xs font-medium ${BADGE_CLASSES[text]}">${text}</span>`;
+    }
+
+    const USERS = {
+      laura: { name: 'Laura Méndez', email: 'laura@novaretail.com', company: 'Nova Retail', plan: 'Enterprise', status: 'Activo', registered: '2025-11-03', agents: ['SalesBot', 'DataScout'] },
+      diego: { name: 'Diego Ramírez', email: 'diego@finexa.io', company: 'Finexa', plan: 'Pro', status: 'Activo', registered: '2026-02-14', agents: ['SupportAI'] },
+      sofia: { name: 'Sofía Castro', email: 'sofia@lumenlegal.com', company: 'Lumen Legal', plan: 'Pro', status: 'Activo', registered: '2026-03-22', agents: ['DocReader'] },
+      ana: { name: 'Ana Torres', email: 'ana@bloomhealth.com', company: 'Bloom Health', plan: 'Starter', status: 'Activo', registered: '2025-12-10', agents: ['Scheduler Pro'] },
+      martin: { name: 'Martín Rojas', email: 'martin@kairolabs.dev', company: 'Kairo Labs', plan: 'Starter', status: 'Suspendido', registered: '2026-01-08', agents: [] },
+      valentina: { name: 'Valentina Ruiz', email: 'valentina@ortizstudio.com', company: 'Ortiz Studio', plan: 'Starter', status: 'Pendiente', registered: '2026-09-28', agents: [] }
+    };
+
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalBody = document.getElementById('modal-body');
+
+    function openModal(title, contentHtml) {
+      modalTitle.textContent = title;
+      modalBody.innerHTML = contentHtml;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    document.getElementById('modal-close').addEventListener('click', closeModal);
+
+    modal.addEventListener('click', event => {
+      if (event.target === modal) closeModal();
+    });
+
+    function detailRow(label, value) {
+      return `
+        <div class="grid grid-cols-3 gap-4 py-2">
+          <dt class="text-gray-500 dark:text-gray-400">${label}</dt>
+          <dd class="col-span-2">${value}</dd>
+        </div>`;
+    }
+
+    function showUserDetail(userId) {
+      const user = USERS[userId];
+      const agents = user.agents.length > 0 ? user.agents.join(', ') : 'Sin agentes';
+      openModal(user.name, `
+        <dl class="divide-y divide-gray-100 dark:divide-gray-700">
+          ${detailRow('Email', user.email)}
+          ${detailRow('Empresa', user.company)}
+          ${detailRow('Plan', user.plan)}
+          ${detailRow('Estado', badge(user.status))}
+          ${detailRow('Registro', user.registered)}
+          ${detailRow('Agentes', agents)}
+        </dl>`);
+    }
+
+    function deleteRow(button, name) {
+      if (confirm(`¿Seguro que quieres eliminar a ${name}?`)) {
+        button.closest('tr').remove();
+      }
+    }
+
+    function handleAction(button) {
+      const { action, id } = button.dataset;
+      if (action === 'user-detail') showUserDetail(id);
+      if (action === 'user-delete') deleteRow(button, USERS[id].name);
+    }
+
+    function closeAllDropdowns() {
+      document.querySelectorAll('[data-dropdown-menu]').forEach(menu => menu.classList.add('hidden'));
+      document.querySelectorAll('[data-dropdown-toggle]').forEach(toggle => toggle.setAttribute('aria-expanded', 'false'));
+    }
+
+    document.addEventListener('click', event => {
+      const toggle = event.target.closest('[data-dropdown-toggle]');
+      if (toggle) {
+        const menu = toggle.nextElementSibling;
+        const wasOpen = !menu.classList.contains('hidden');
+        closeAllDropdowns();
+        if (!wasOpen) {
+          menu.classList.remove('hidden');
+          toggle.setAttribute('aria-expanded', 'true');
+        }
+        return;
+      }
+
+      const actionButton = event.target.closest('[data-action]');
+      if (actionButton) {
+        closeAllDropdowns();
+        handleAction(actionButton);
+        return;
+      }
+
+      closeAllDropdowns();
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        closeAllDropdowns();
+        closeModal();
+      }
+    });
   </script>
 </body>
 </html>
